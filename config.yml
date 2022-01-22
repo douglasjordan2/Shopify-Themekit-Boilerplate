@@ -1,7 +1,7 @@
 development:
   password: ${PASSWORD}
   theme_id: "${DEV_THEME}"
-  store: ${SHOP}
+  store: ${STORE}
   directory: dist/
   ignore:
     config/settings_data.json
@@ -9,7 +9,7 @@ development:
 production:
   password: ${PASSWORD}
   theme_id: "${PROD_THEME}"
-  store: ${SHOP}
+  store: ${STORE}
   directory: dist/
   ignore:
     config/settings_data.json
