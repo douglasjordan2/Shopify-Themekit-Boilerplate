@@ -1,19 +1,35 @@
-const prompt = require('prompt-sync')()
 const fs = require('fs')
+const readline = require('readline')
 
-const $STORE = 'STORE=' + prompt('Enter Store URL:')
-const $PASSWORD = 'PASSWORD=' + prompt('Enter ThemeKit password:')
-const $DEV = 'DEV_THEME=' + prompt('Enter development Theme ID:')
-const $PROD = 'PROD_THEME=' + prompt('Enter production Theme ID:')
+const rl = readline
+    .createInterface({
+        input: process.stdin,
+        output: process.stdout
+    })
 
-const variables = $STORE + '\n' + $PASSWORD + '\n' + $DEV + '\n' + $PROD 
+const gitignoreWriteStream = fs.createWriteStream('./.gitignore')
+gitignoreWriteStream.write('node_modules\npackage-lock.json\nconfig.yml\nvariables')
+gitignoreWriteStream.close()
 
-fs.writeFile('./variables', variables, err => {
-    if (err) { console.log(err) }
+const variableWriteStream = fs.createWriteStream('./variables')
+
+rl.question('Enter Store URL: ', $STORE => {
+    rl.question('Enter ThemeKi0t password: ', $PASSWORD => {
+        rl.question('Enter development Theme ID: ', $DEV => {
+            rl.question('Enter development Theme ID: ', $PROD => {
+                variableWriteStream.write(Object.entries({
+                    'STORE': $STORE,
+                    'PASSWORD': $PASSWORD,
+                    'DEV': $DEV,
+                    'PROD': $PROD
+                }).map(([key, value]) => `${[key]}=${value}\n`).join(''))
+
+                rl.close()
+            })
+        })
+    })
 })
 
-const gitignore = 'node_modules\npackage-lock.json\nconfig.yml\nvariables'
-
-fs.writeFile('./.gitignore', gitignore, err => {
-    if (err) { console.log(err) }
+rl.on('close', () => {
+    variableWriteStream.close()
 })

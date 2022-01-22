@@ -22,7 +22,6 @@
     "copy-webpack-plugin": "^5.1.2",
     "cross-var": "^1.1.0",
     "css-loader": "^3.6.0",
-    "dotenv-cli": "^4.1.1",
     "eslint-plugin-compat": "^4.0.0",
     "fs": "0.0.1-security",
     "glob": "^7.1.6",

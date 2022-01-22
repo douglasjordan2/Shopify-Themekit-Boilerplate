@@ -1,6 +1,6 @@
 development:
   password: ${PASSWORD}
-  theme_id: "${DEV_THEME}"
+  theme_id: "${DEV}"
   store: ${STORE}
   directory: dist/
   ignore:
@@ -8,7 +8,7 @@ development:
 
 production:
   password: ${PASSWORD}
-  theme_id: "${PROD_THEME}"
+  theme_id: "${PROD}"
   store: ${STORE}
   directory: dist/
   ignore:
