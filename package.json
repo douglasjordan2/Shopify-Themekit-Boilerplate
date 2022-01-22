@@ -1,0 +1,37 @@
+{
+  "name": "shopify-dev-example",
+  "version": "1.0.0",
+  "description": "A basic, custom-made Shopify theme to showcase development abilities.",
+  "private": true,
+  "main": "webpack.config.js",
+  "scripts": {
+    "init": "npm install; npm run build; touch variables; echo \"PASSWORD=%PASSWORD%\nDEV_THEME=%DEV_THEME%\n%PROD_THEME=%PROD_THEME%\nSHOP=%SHOP%\" > variables; touch .gitignore; echo \"node_modules\npackage-lock.json\nconfig.yml\nvariables\" > .gitignore; git checkout -b \"development\"; git add .; git commit -m \"Init\"; git push origin development;",
+    "dev": "NODE_ENV=development webpack --watch",
+    "prod": "NODE_ENV=production webpack",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "@krjo",
+  "license": "MIT",
+  "devDependencies": {
+    "@shopify/theme-cart": "^3.1.0",
+    "@shopify/theme-product": "^3.1.0",
+    "@shopify/theme-product-form": "^3.1.0",
+    "autoprefixer": "^9.8.6",
+    "axios": "^0.25.0",
+    "copy-webpack-plugin": "^5.1.2",
+    "cross-var": "^1.1.0",
+    "css-loader": "^3.6.0",
+    "dotenv-cli": "^4.1.1",
+    "eslint-plugin-compat": "^4.0.0",
+    "glob": "^7.1.6",
+    "mini-css-extract-plugin": "^1.5.0",
+    "node-sass": "^5.0.0",
+    "postcss-loader": "^5.2.0",
+    "pre-commit": "^1.2.2",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.6.0",
+    "webpack-shell-plugin-next": "^2.2.2"
+  }
+}

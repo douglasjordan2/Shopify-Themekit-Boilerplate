@@ -1,0 +1,35 @@
+/* Example SCSS Variables */
+
+// Colors
+$light: #fff;
+$dark: #000;
+
+// Breakpoints
+$small: 575px;
+$medium: 1000px;
+$large: 1440px;
+
+// Spacing
+$spacesm: 12px;
+$spacemd: 20px;
+$spacelg: 38px;
+$spacexl: 49px;
+$spacexxl: 85px;
+
+// Font Sizes
+$fontdef: 16px;
+$fontxxs: 7px;
+$fontxs: 11px;
+$fontsm: 14px;
+$fontmd: 24px;
+$fontlg: 40px;
+$fontxl: 60px;
+$fontxxl: 97px;
+
+// Font families
+$fontprimary: '';
+$fontprimaryitalic: '';
+$fontsecondary: '';
+
+// Misc
+$i: !important;

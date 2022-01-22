@@ -1,0 +1,53 @@
+@import './font-face';
+
+.text-primary {
+    font-family: $fontprimary;
+}
+
+.text-secondary {
+    font-family: $fontsecondary;
+}
+
+.text {
+    font-size: $fontdef;
+}
+
+.text-xxs {
+    font-size: $fontxxs;
+}
+
+.text-xs {
+    font-size: $fontxs;
+}
+
+.text-sm {
+    font-size: $fontsm;
+}
+
+.text-md {
+    font-size: $fontmd;
+}
+
+.text-lg {
+    font-size: $fontlg;
+}
+
+.text-xl {
+    font-size: $fontxl;
+}
+
+.text-xxl {
+    font-size: $fontxxl;
+}
+
+.light {
+    color: $light;
+}
+
+.dark {
+    color: $dark;
+}
+
+.bold {
+    font-weight: bold;
+}

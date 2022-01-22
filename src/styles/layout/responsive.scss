@@ -1,0 +1,15 @@
+.desktop {
+    display: block;
+
+    @include mq($small, 'max') {
+        display: none;
+    }
+}
+
+.mobile {
+    display: none;
+
+    @include mq($small, 'max') {
+        display: block
+    }
+}

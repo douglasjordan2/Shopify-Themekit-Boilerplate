@@ -1,0 +1,15 @@
+development:
+  password: ${PASSWORD}
+  theme_id: "${DEV_THEME}"
+  store: ${SHOP}
+  directory: dist/
+  ignore:
+    config/settings_data.json
+
+production:
+  password: ${PASSWORD}
+  theme_id: "${PROD_THEME}"
+  store: ${SHOP}
+  directory: dist/
+  ignore:
+    config/settings_data.json

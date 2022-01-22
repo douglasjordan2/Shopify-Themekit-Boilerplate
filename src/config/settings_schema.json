@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Site",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "logo",
+                "label": "Site Logo"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo_secondary",
+                "label": "Secondary Logo"
+            }
+        ]
+    },
+    {
+        "name":"UI",
+        "settings":[
+            {
+                "type":"header",
+                "content":"Base Colours"
+            },
+            {
+                "type":"color",
+                "id":"color_light",
+                "label":"Light",
+                "default":"#fff"
+            },
+            {
+                "type":"color",
+                "id":"color_dark",
+                "label":"Dark",
+                "default":"#000"
+            }
+        ]
+    },
+    {
+        "name": "",
+        "theme_name": "",
+        "theme_version": "1.0.0",
+        "theme_author": "",
+        "theme_documentation_url": "",
+        "theme_support_url": ""
+    }
+]
